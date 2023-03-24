@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #f2f2f2;
+    background-color: #fffcff;
     padding: 20px;
     border-bottom: 1px solid #e5e5e5;
     position: fixed;
@@ -92,9 +92,62 @@ header {
   }
   
   .contact-btn:hover {
+    border: 1px solid #c14abe;
     background-color: #c14abe;
+    border-radius: 3px;
     color: #fff;
+    font-size: 16px;
     border-color: #c14abe;
     text-decoration: none;
   }
   
+  .container{
+    margin-top: 5%;
+  }
+
+  footer {
+    background-color: #261f26;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    color: #fffcff;
+    margin: 0;
+  }
+
+  .footer-copyright{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-copyright-left, .footer-copyright-right{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .impressum, .location{
+    font-size: 14px;
+    color: #fffcff;
+    margin: 0 0 0 5px;
+  }
+
+  .location{
+    text-decoration: none;
+    color: #c14abe;
+  }
+
+  .impressum:hover, .location:hover {
+    color: #c14abe;
+    font-size: 14px;
+    text-decoration: underline;
+  }
+
