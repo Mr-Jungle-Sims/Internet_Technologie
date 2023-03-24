@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&display=swap');
+
 
 :root {
 }
-
 
 body {
     background-color: #f5f5f5;
@@ -10,42 +11,90 @@ body {
 }
 
 header {
-    background-color: #fff;
+    background-color: #f2f2f2;
+    padding: 20px;
     border-bottom: 1px solid #e5e5e5;
-    height: 70px;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 999;
+    height: 10%;
   }
   
   .header-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100%;
+    width: 85%;
+    height: 90%;
+    margin: auto;
   }
   
-  .logo img {
-    max-height: 50px;
+  .header-nav-left {
+    margin-right: auto;
+  }
+  
+  .header-nav-right {
+    margin-left: auto;
+  }
+  
+  .header-logo {
+    text-align: center;
+  }
+  
+  .header-logo a {
+    text-decoration: none;
+    color: #c14abe;
+    font-family: 'Fuggles', sans-serif;
+    font-size: 76px;
+  }
+  
+  .header-logo span {
+    display: block;
+    margin-top: 10px;
   }
   
   nav ul {
     list-style: none;
-    display: flex;
+    margin: 0;
+    padding: 0;
   }
   
-  nav ul li {
-    margin-right: 20px;
+  nav li {
+    display: inline-block;
+    margin: 0 10px;
   }
   
-  nav ul li a {
+  nav li a {
     color: #333;
     text-decoration: none;
+    font-size: 17px;
+  }
+  
+  nav ul li a:hover {
+    color: #c14abe;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .contact-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-color: #333;
+    border-radius: 3px;
+    color: #333;
+    padding: 10px 20px;
     font-size: 16px;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: #c14abe;
+    color: #fff;
+    border-color: #c14abe;
+    text-decoration: none;
   }
   
