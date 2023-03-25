@@ -115,9 +115,108 @@ header {
     width: 90%;
     margin: 0 auto;
   }
+
+  .footer-top{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5%;
+	flex-wrap: wrap;
+  }
+  
+  .footer-col ul {
+    margin: 0;
+    margin-top: 10%;
+    padding: 0;
+  }
+
+.footer-col{
+    display: inline-block;
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    align-items: flex-start;
+    position: relative;
+ }
+
+ .footer-col h4{
+	font-size: 18px;
+    padding: 0;
+    margin: 0;
+	color: #fffcff;
+	font-weight: 500;
+	position: absolute;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #c14abe;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #fffcff;
+	text-decoration: none;
+	font-weight: 300;
+    display: inline-block;
+	transition: all 0.3s ease;
+	position: absolute;
+}
+.footer-col ul li p{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #fffcff;
+	text-decoration: none;
+	font-weight: 300;
+    display: inline-block;
+	position: absolute;
+}
+.footer-col ul li a:hover{
+    color: #c14abe;
+	padding-left: 8px;
+}
+
+  .footer-social{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 3%;
+  }
+
+  .social{
+    font-size: 18px;
+    color: #fffcff;
+    margin: 0 0 2px 0;
+    font-weight: bold;
+  }
+
+  .social-media{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: absolute;
+  }
+
+  .media-image{
+    margin-right: 5px;
+  }
+
+  .media-image:hover{
+    opacity: 0.7;
+    transition: all 0.3s ease;;
+  }
   
   .copyright {
-    font-size: 14px;
+    font-size: 13px;
     color: #fffcff;
     margin: 0;
   }
@@ -127,6 +226,7 @@ header {
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    margin-bottom: 2%;
   }
 
   .footer-copyright-left, .footer-copyright-right{
@@ -135,7 +235,7 @@ header {
   }
 
   .impressum, .location{
-    font-size: 14px;
+    font-size: 13px;
     color: #fffcff;
     margin: 0 0 0 5px;
   }
@@ -147,7 +247,19 @@ header {
 
   .impressum:hover, .location:hover {
     color: #c14abe;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: underline;
   }
 
+  /*responsive*/
+@media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+}
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+}
