@@ -2,107 +2,109 @@
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
-	Layout = null;
+	Layout = "MainTemplate.cshtml";
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Blumenfee</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="/css/main.css" />
-</head>
-<body class="body">
-  
-    <header>
-        <div class="header-container">
-            <nav class="header-nav-left"><ul>
-                      <li><a href="#">Über uns</a></li>
-                      <li><a href="#">Leistungen</a></li>
-                      <li><a href="#">Galerie</a></li>
-                  </ul></nav>
-            <div class="header-logo">
-                <a href="/">
-                     <span>Blumenfee</span>
-                </a>
-            </div>
-            <span class="fa fa-bars" id="menuIcon"></span>
-            <ul class="dropdownMenu">
-                <li><a href="#">Über uns</a></li>
-                <li><a href="#">Leistungen</a></li>
-                <li><a href="#">Galerie</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-            <nav class="header-nav-right"><ul>
-                    <li><a class="contact-btn" href="#">Kontakt</a></li>
-            </ul></nav>
-        </div>
-    </header>
-    
-    <main >
-        <section>
-            <div class="container">
-                <img src="https://via.placeholder.com/800x800" alt="Logo">
-                <h1>Welcome to my webpage</h1>
-                <p>This is some centered text that appears in the middle of the page.</p>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <section class="footer-container f-top">
-                <div class="footer-col">
-                    <h4>Standort</h4>
-                    <div class="adress-location">
-                        <span>Auguststraße 40</span>
-                        <span>D-66450 Bexbach</span>
-                        <span><strong>01715 705 305</strong></span>
-                        <a href="#">info@die-blumenfee.de</a>
-  	 			    </div>
-  	 		    </div>
-  	 		    <div class="footer-col">
-  	 			     <h4>Unternehmen</h4>
-  	 			     <div class="compagny">
-  	 			         <a href="#">Über uns</a>
-  	 			         <a href="#">Leistungen</a>
-  	 			         <a href="#">Galerie</a>
-  	 			         <a href="#">Kontakt</a>
-  	 		         </div>
-  	 		   </div>
-  	 	       <div class="footer-col">
-  	 		         <h4>Zeitpläne</h4>
-  	 			     <div class="schedule">
-  	 			       	<span class="day">Mon — Fri<span class="time">9am — 5pm</span></span>
-  	 			        <span class="day">Samstag<span class="time">8am — 12pm</span></span>
-  	 			     	<span class="day">Sontag<span class="time">10am — 1pm</span></span>
-  	 		         </div>
-  	 	       </div>
-  	 	       <div class="footer-col">
-  	 		         <h4>Folgen Sie uns</h4>
-  	 			     <div class="social-media">
-  	 			         <a href="https://www.facebook.com/bfweddings" target="_blank">
-  	 			             <i class="fa fa-facebook"></i></a>
-  	 			         <a href="https://ok.ru/blumenfee" target="_blank">
-  	 			             <i class="fa fa-odnoklassniki"></i></a>
-                    </div>
-  	 	       </div>
-        </section>
-        <section class="footer-container f-bottom">
-            <div class="footer-copyright">
-                <div class="footer-copyright-left">
-                    <p class="copyright">&copy; 2023 Blumenfee</p>
-                    <a class="impressum" href="#">Impressum</a>
-                </div>
-                <div class="footer-copyright-right">
-                    <p class="copyright">Made with <span style="color:red;">&hearts;</span> in</p>
-                    <a class="location" href="https://www.saarbruecken.de/" target="_blank">Saarbrücken</a>
-                </div>
-            </div>
-        </section>
-    </footer>
-    
-</body>
-</html>
+<!DOCTYPE HTML>
+
+		
+		<!-- Jumbotron, w title -->
+		<div class="jumbotron text-center jumbotron-fluid">
+			<div class="container">
+				<h1 class="display-1">@Model.Value("pageTitle")</h1>
+				<p>And this is <span class="font-weight-bold">only</span> the beginning.</p>
+			</div>
+		</div>
+
+		<!-- This is where we're going to render our content -->
+		
+		<div class="container">
+
+			<div class="row section">
+				<div class="col-md-12">
+
+					@Model.Value("bodyText")
+
+				</div>				
+			</div>
+
+		</div>
+
+		<!-- Grey Banner -->
+		<div class="container-fluid grey-bg">
+			<div class="container">
+				<div class="row section">
+					<div class="col-md-8">
+						<h2>A flexible CMS - do things your way</h2>
+						<p>The Umbraco source code is free and available for download either as a ZIP file or via NuGet under the MIT license, so you can <a href="#">start crafting websites in Umbraco today</a>. 
+						Need to build a site with multiple 3rd party extensions and customized add-ons? No problem. Need to build a simple site with a straightforward contact form? No problem.</p>
+						<p>Whatever type or scale of your project, Umbraco will be able to handle it - and the cherry on top; with Umbraco’s well-known editor friendly UI, 
+							no matter how complex a site you’re building, you know that your editors will still find it a breeze to edit. Oh, and the cherry on top of the cherry - 
+							there's <span class="font-weight-bold">no need for you to spend time learning a new coding or templating language as Umbraco is based on C#, javaScript and Razor</span>. </p>
+					</div>
+					<div class="col-md-4">
+						<img src="/images/community.png" class="img-fluid" alt="Community illustration">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Blog section -->
+		<div class="container">
+
+			<div class="row section">
+				<div class="col-md-12">
+					<h1>Latest from the blog</h1>
+				</div>
+
+				<!-- Blog Post query goes here. -->
+				<div class="col-md-4">
+					<div class="box-blog">
+						<a href="Blogpost.html"><div class="blog-promoImage" style="background-image:url('/images/u_product_roadmap_white-1.png')"></div></a>
+						<h5>Product Update - Deploying Deploy 3.3</h5>
+						<p class="blog-meta">January 20th 2020 - by Sofie Toft</p>
+						<p>The end of 2019 is approaching and with this, also the last Product Update of the year. 
+							Let’s have a look at what we’ve been working on and what you can expect in the near future.</p>
+					</div>
+					<a href="Blogpost.html" class="btn btn-inverted">Read more >></a>
+				</div>
+				<div class="col-md-4">
+					<div class="box-blog">
+						<a href="#"><div class="blog-promoImage" style="background-image:url('/images/Press.jpg')"></div></a>
+						<h5>Umbraco <3 YouTube</h5>
+						<p class="blog-meta">January 20th 2020 - by Sofie Toft</p>
+						<p>The end of 2019 is approaching and with this, also the last Product Update of the year. 
+							Let’s have a look at what we’ve been working on and what you can expect in the near future.</p>
+					</div>
+					<a href="#" class="btn btn-inverted">Read more >></a>
+				</div>
+				<div class="col-md-4">
+					<div class="box-blog">
+						<a href="#"><div class="blog-promoImage" style="background-image:url('/images/sofie-hammock.jpg')"></div></a>
+						<h5>A day in a Documentation Curators life</h5>
+						<p class="blog-meta">January 20th 2020 - by Sofie Toft</p>
+						<p>The end of 2019 is approaching and with this, also the last Product Update of the year. 
+							Let’s have a look at what we’ve been working on and what you can expect in the near future.</p>
+					</div>
+					<a href="#" class="btn btn-inverted blog-box-btn">Read more >></a>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Call to Action -->
+		<div class="container-fluid orange-bg">
+			<div class="container">
+
+				<div class="row section">
+					<div class="col-md-12 text-center">
+						<h1>How to continue your Umbraco journey</h1>
+						<p>What’s next? We have gathered the 3 best ways for you to go on from here ensuring you get the best start to your Umbraco journey: <br/><br/></p>
+						<a href="#" class="btn btn-inverted-orange" role="button">3 ways to start your Umbraco Journey >></a>
+					</div>
+				</div>
+	
+			</div>
+		</div>
+
+		
